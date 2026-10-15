@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriBovino Pro | Nutrición y Alimentación Bovina de Precisión</title>
+  <meta name="description" content="Plataforma de nutrición y alimentación bovina de precisión. Cálculos bromatológicos, balances de raciones para carne y leche, y asesoría zootécnica basada en NRC, FEDNA y AGROSAVIA.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar">
+    <div class="announcement-content">
+      <span class="badge-pulse"><i class="fa-solid fa-seedling"></i> Estándares 2026</span>
+      <span>Integración con normativas NRC • NASEM • FEDNA • AGROSAVIA para trópico y templado</span>
+    </div>
+  </aside>
+
+  <!-- Navigation Header -->
+  <header class="navbar" id="main-nav">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-cow"></i></div>
+        <div class="logo-text">
+          <span class="logo-title">NutriBovino<span class="accent-text">Pro</span></span>
+          <span class="logo-subtitle">Zootecnia & Nutrición Bovina</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#hero" class="nav-link active">Inicio</a>
+        <a href="#calculadora" class="nav-link">Calculadora Dietas</a>
+        <a href="#parametros" class="nav-link">Parámetros Bromatológicos</a>
+        <a href="#fases" class="nav-link">Fases Productivas</a>
+        <a href="#infografia" class="nav-link">Infografía</a>
+        <a href="#video-tour" class="nav-link">Video Campo</a>
+        <a href="#asistente-ia" class="nav-link highlight">Consultor IA</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#calculadora" class="btn btn-primary btn-sm">
+          <i class="fa-solid fa-calculator"></i> Simular Ración
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú de navegación">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-video-bg-wrapper">
+        <video autoplay muted loop playsinline class="hero-bg-video" id="hero-video">
+          <source src="./Cattle_moving_on_ranch_1080p_20261015133733.mp4" type="video/mp4">
+          Tu navegador no soporta videos HTML5.
+        </video>
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-content">
+        <div class="hero-grid">
+          <div class="hero-text-col">
+            <div class="hero-tag">
+              <i class="fa-solid fa-dna"></i> Nutrición Ruminal de Alto Rendimiento
+            </div>
+            <h1 class="hero-title">
+              Nutrición Bovina de Precisión para <span class="gradient-text">Máxima Rentabilidad</span> y Salud
+            </h1>
+            <p class="hero-description">
+              Optimice el consumo de materia seca (CMS), balancee proteína y energía con base científica (NRC/FEDNA) y prevenga desórdenes metabólicos en ganado de carne y leche bajo pastoreo o confinamiento.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#calculadora" class="btn btn-primary btn-lg shadow-glow">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Iniciar Calculadora Nutricional
+              </a>
+              <a href="#infografia" class="btn btn-outline btn-lg">
+                <i class="fa-solid fa-chart-pie"></i> Ver Infografía Bromatológica
+              </a>
+            </div>
+
+            <!-- Trust / Metrics stats -->
+            <div class="hero-metrics">
+              <div class="metric-item">
+                <div class="metric-number">+24%</div>
+                <div class="metric-label">Eficiencia en Conversión Alimenticia</div>
+              </div>
+              <div class="metric-divider"></div>
+              <div class="metric-item">
+                <div class="metric-number">-35%</div>
+                <div class="metric-label">Incidencia de Acidosis Ruminal (SARA)</div>
+              </div>
+              <div class="metric-divider"></div>
+              <div class="metric-item">
+                <div class="metric-number">100%</div>
+                <div class="metric-label">Rigor Zootécnico & Bromatológico</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Floating Card -->
+          <div class="hero-card-col">
+            <div class="glass-card hero-preview-card">
+              <div class="card-header-flex">
+                <div class="status-indicator live"></div>
+                <span class="card-badge">Diagnóstico Nutricional En Vivo</span>
+                <span class="pill-badge">Bovinos Carne & Leche</span>
+              </div>
+
+              <div class="live-rumen-status">
+                <div class="rumen-avatar">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="rumen-info">
+                  <h4>Índice de Salud Ruminal</h4>
+                  <p class="text-muted">Fibra Efectiva (FDNe) & Microflora Estable</p>
+                </div>
+                <span class="status-pill status-optimo">Óptimo (pH 6.4)</span>
+              </div>
+
+              <div class="live-progress-list">
+                <div class="progress-box">
+                  <div class="progress-labels">
+                    <span>Materia Seca (MS Consumo)</span>
+                    <strong id="live-ms-val">2.8% PV</strong>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-fill fill-green" style="width: 82%;"></div>
+                  </div>
+                </div>
+
+                <div class="progress-box">
+                  <div class="progress-labels">
+                    <span>Proteína Cruda (PC) Total</span>
+                    <strong>15.2% Dieta</strong>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-fill fill-gold" style="width: 76%;"></div>
+                  </div>
+                </div>
+
+                <div class="progress-box">
+                  <div class="progress-labels">
+                    <span>Fibra Detergente Neutro (FDN)</span>
+                    <strong>38.5% Dieta</strong>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-fill fill-blue" style="width: 65%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-footer-tip">
+                <i class="fa-solid fa-lightbulb text-accent"></i>
+                <small>Dato Clave: Un $FDN > 60\%$ en forrajes limita físicamente el consumo por llenado ruminal.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Nutri-Calculator Section -->
+    <section class="section section-dark" id="calculadora">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="sub-badge"><i class="fa-solid fa-sliders"></i> Herramienta Zootécnica Interactiva</div>
+          <h2 class="section-title">Calculadora de Consumo y Balance Nutricional Bovina</h2>
+          <p class="section-subtitle">
+            Simule el Consumo de Materia Seca (CMS), requerimientos de proteína cruda ($PC$) y energía ($NDT$) según la fase productiva y forraje base.
+          </p>
+        </div>
+
+        <div class="calculator-grid">
+          <!-- Control Panel -->
+          <div class="calculator-controls glass-card">
+            <h3 class="panel-title"><i class="fa-solid fa-gear"></i> Parámetros del Lote / Animal</h3>
+            
+            <div class="input-group">
+              <label for="calc-category">Categoría Productiva:</label>
+              <select id="calc-category" class="custom-select">
+                <option value="ceba" selected>Novillo de Ceba / Engorde Intensivo</option>
+                <option value="leche_alta">Vaca Lechera Especializada (Alta Producción)</option>
+                <option value="leche_media">Vaca Doble Propósito (Media Producción)</option>
+                <option value="levante">Ternero de Levante / Crecimiento</option>
+                <option value="vaca_seca">Vaca Horra / Periodo de Transición</option>
+              </select>
+            </div>
+
+            <div class="input-group">
+              <div class="slider-label-flex">
+                <label for="calc-weight">Peso Vivo Promedio ($PV$):</label>
+                <span class="slider-value" id="weight-display">420 kg</span>
+              </div>
+              <input type="range" id="calc-weight" min="150" max="750" value="420" step="10" class="custom-slider">
+              <div class="slider-scale">
+                <span>150 kg</span>
+                <span>450 kg</span>
+                <span>750 kg</span>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="calc-forage">Forraje Base Principal:</label>
+              <select id="calc-forage" class="custom-select">
+                <option value="brachiaria">Brachiaria brizantha (Trópico bajo, MS: 23%, PC: 8.5%, FDN: 62%)</option>
+                <option value="kikuyo">Pasto Kikuyo (Trópico alto, MS: 18%, PC: 16%, FDN: 56%)</option>
+                <option value="ryegrass">Ryegrass perenne (Templado, MS: 20%, PC: 20%, FDN: 46%)</option>
+                <option value="ensilaje_maiz" selected>Ensilaje de Maíz (Conservado, MS: 32%, PC: 8%, FDN: 44%)</option>
+                <option value="heno_pangola">Heno de Pangola (Conservado, MS: 88%, PC: 7%, FDN: 68%)</option>
+              </select>
+            </div>
+
+            <div class="input-group">
+              <div class="slider-label-flex">
+                <label for="calc-concentrate">Inclusión de Concentrado / Suplemento:</label>
+                <span class="slider-value" id="concentrate-display">25% de la dieta</span>
+              </div>
+              <input type="range" id="calc-concentrate" min="0" max="60" value="25" step="5" class="custom-slider">
+              <div class="slider-scale">
+                <span>0% (Solo pasto)</span>
+                <span>30% (Semi-intensivo)</span>
+                <span>60% (Feedlot)</span>
+              </div>
+            </div>
+
+            <button class="btn btn-primary btn-block" id="calc-recalculate-btn">
+              <i class="fa-solid fa-arrows-rotate"></i> Actualizar Diagnóstico de Ración
+            </button>
+          </div>
+
+          <!-- Dynamic Results Dashboard -->
+          <div class="calculator-results glass-card">
+            <h3 class="panel-title"><i class="fa-solid fa-chart-column"></i> Balance Estimado & Salud Ruminal</h3>
+
+            <div class="kpi-grid">
+              <div class="kpi-card">
+                <span class="kpi-title">Consumo de Materia Seca (CMS)</span>
+                <div class="kpi-value" id="res-cms">10.92 <small>kg MS/día</small></div>
+                <div class="kpi-sub" id="res-cms-pct">Equivale al 2.60% del Peso Vivo</div>
+              </div>
+
+              <div class="kpi-card">
+                <span class="kpi-title">Consumo Tal Cual (Materia Fresca)</span>
+                <div class="kpi-value" id="res-tc">31.2 <small>kg/día</small></div>
+                <div class="kpi-sub">Alimento fresco en comedero</div>
+              </div>
+
+              <div class="kpi-card">
+                <span class="kpi-title">Aporte de Proteína Cruda (PC)</span>
+                <div class="kpi-value" id="res-pc">1.34 <small>kg PC/día</small></div>
+                <div class="kpi-sub" id="res-pc-pct">12.3% en la ración total</div>
+              </div>
+
+              <div class="kpi-card">
+                <span class="kpi-title">Aporte Energético (NDT Estimado)</span>
+                <div class="kpi-value" id="res-ndt">66.5 <small>% NDT</small></div>
+                <div class="kpi-sub" id="res-en">ENm: 1.54 Mcal/kg | ENg: 0.95 Mcal/kg</div>
+              </div>
+            </div>
+
+            <!-- Ruminal Health Alert Bar -->
+            <div class="rumen-alert-box" id="rumen-alert">
+              <div class="alert-icon-wrap" id="rumen-icon">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <div class="alert-text-wrap">
+                <strong id="rumen-title">Ambiente Ruminal Seguro y Balanceado</strong>
+                <p id="rumen-desc">El nivel de fibra detergente neutro efectiva (FDNe) es suficiente para estimular la rumia, secreción de saliva y amortiguar el pH ruminal.</p>
+              </div>
+            </div>
+
+            <!-- Technical Recommendations List -->
+            <div class="calc-recommendations">
+              <h4><i class="fa-solid fa-clipboard-check text-accent"></i> Directrices Zootécnicas para esta Dieta:</h4>
+              <ul id="recommendation-list">
+                <li><i class="fa-solid fa-check text-success"></i> Acceso ad libitum a agua limpia (relación 4:1 con materia seca).</li>
+                <li><i class="fa-solid fa-check text-success"></i> Suplementación mineralizada al 6-8% de Fósforo biodisponible.</li>
+                <li><i class="fa-solid fa-check text-success"></i> Monitorear bosta (consistencia puntuación 3 en escala de 1 a 5).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bromatological Parameters Section -->
+    <section class="section" id="parametros">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="sub-badge"><i class="fa-solid fa-flask-vial"></i> Laboratorio & Bromatología</div>
+          <h2 class="section-title">Parámetros Clave en Análisis Nutricional Bovino</h2>
+          <p class="section-subtitle">
+            Haga clic sobre cualquier parámetro para descubrir su significado fisiológico, rangos de referencia e impacto en la producción zootécnica.
+          </p>
+        </div>
+
+        <div class="parameters-grid">
+          <!-- Card MS -->
+          <div class="param-card active" data-param="ms">
+            <div class="param-badge">Base Fundamental</div>
+            <div class="param-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+            <h3 class="param-name">Materia Seca (MS)</h3>
+            <div class="param-formula">Formula: $MS = 100 - \%Humedad$</div>
+            <p class="param-summary">Es el contenido libre de agua. Todos los nutrientes se calculan obligatoriamente sobre base seca.</p>
+            <div class="param-footer">
+              <span class="range-badge">Rango habitual: 15% - 90%</span>
+              <span class="click-hint"><i class="fa-solid fa-angle-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Card PC -->
+          <div class="param-card" data-param="pc">
+            <div class="param-badge">Proteína Total</div>
+            <div class="param-icon"><i class="fa-solid fa-dna"></i></div>
+            <h3 class="param-name">Proteína Cruda (PC)</h3>
+            <div class="param-formula">Formula: $PC = \%Nitrógeno \times 6.25$</div>
+            <p class="param-summary">Esencial para la síntesis de proteína microbiana en rumen y aporte al duodeno del rumiante.</p>
+            <div class="param-footer">
+              <span class="range-badge">Rango habitual: 7% - 24%</span>
+              <span class="click-hint"><i class="fa-solid fa-angle-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Card FDN -->
+          <div class="param-card" data-param="fdn">
+            <div class="param-badge">Llenado Ruminal</div>
+            <div class="param-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+            <h3 class="param-name">Fibra Neutro Detergente (FDN)</h3>
+            <div class="param-formula">Formula: Celulosa + Hemicelulosa + Lignina</div>
+            <p class="param-summary">Determina el límite físico de consumo voluntario por distensión ruminal y tiempo de tránsito.</p>
+            <div class="param-footer">
+              <span class="range-badge">Rango habitual: 35% - 70%</span>
+              <span class="click-hint"><i class="fa-solid fa-angle-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Card FDA -->
+          <div class="param-card" data-param="fda">
+            <div class="param-badge">Digestibilidad Inversa</div>
+            <div class="param-icon"><i class="fa-solid fa-microscope"></i></div>
+            <h3 class="param-name">Fibra Ácido Detergente (FDA)</h3>
+            <div class="param-formula">Formula: Celulosa + Lignina insoluble</div>
+            <p class="param-summary">A mayor porcentaje de FDA, menor es la digestibilidad aparente y el valor energético del pasto.</p>
+            <div class="param-footer">
+              <span class="range-badge">Rango habitual: 25% - 45%</span>
+              <span class="click-hint"><i class="fa-solid fa-angle-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Card NDT -->
+          <div class="param-card" data-param="ndt">
+            <div class="param-badge">Energía Total</div>
+            <div class="param-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+            <h3 class="param-name">Nutrientes Digestibles (NDT)</h3>
+            <div class="param-formula">Formula: $NDT = PND + FND + ELND + (EED \times 2.25)$</div>
+            <p class="param-summary">Estimación calórica integral utilizada para predecir ganancia de peso y producción láctea.</p>
+            <div class="param-footer">
+              <span class="range-badge">Rango habitual: 50% - 78%</span>
+              <span class="click-hint"><i class="fa-solid fa-angle-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Card FDNe -->
+          <div class="param-card" data-param="fdne">
+            <div class="param-badge">Salud Ruminal</div>
+            <div class="param-icon"><i class="fa-solid fa-shield-virus"></i></div>
+            <h3 class="param-name">Fibra Efectiva (FDNe)</h3>
+            <div class="param-formula">Formula: $FDN \times \%Partículas > 8\text{mm}$</div>
+            <p class="param-summary">Previene la acidosis ruminal estimulando la masticación y la producción de buffer salivar.</p>
+            <div class="param-footer">
+              <span class="range-badge">Mínimo sugerido: >20% en dieta</span>
+              <span class="click-hint"><i class="fa-solid fa-angle-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detail Modal Box for Bromatological Parameters -->
+        <div class="param-detail-viewer glass-card" id="param-detail-viewer">
+          <div class="detail-header">
+            <div class="detail-title-wrap">
+              <span class="detail-badge" id="det-badge">Base Fundamental</span>
+              <h3 id="det-title">Materia Seca (MS)</h3>
+            </div>
+            <div class="detail-tag" id="det-formula">Fórmula: $MS = 100 - \%Humedad$</div>
+          </div>
+
+          <div class="detail-body-grid">
+            <div class="detail-col">
+              <h4><i class="fa-solid fa-stethoscope text-accent"></i> Importancia Fisiológica:</h4>
+              <p id="det-physio">El agua presente en los pastos frescos (que puede llegar al 85%) no aporta nutrientes. Todos los requerimientos del rumiante se calculan en gramos o kilogramos de Materia Seca. Un animal nunca come "kilos de pasto verde" sino kilos de materia seca que sustentan a las bacterias ruminales.</p>
+            </div>
+            <div class="detail-col">
+              <h4><i class="fa-solid fa-cow text-success"></i> Impacto en Campo y Producción:</h4>
+              <p id="det-impact">Pasturas muy tiernas con menos de 18% de MS provocan un llenado rápido del rumen por agua y diarreas osmóticas, limitando el consumo total de nutrientes y mermando la producción de leche y carne.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Production Phases Section -->
+    <section class="section section-dark" id="fases">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="sub-badge"><i class="fa-solid fa-layer-group"></i> Estrategias Nutricionales</div>
+          <h2 class="section-title">Manejo Nutricional por Fases Productivas</h2>
+          <p class="section-subtitle">
+            Cada etapa zootécnica exige un perfil metabólico específico para rentabilizar la inversión en forrajes y concentrados.
+          </p>
+        </div>
+
+        <!-- Tab Nav -->
+        <div class="phases-tabs">
+          <button class="phase-tab-btn active" data-phase="cria">
+            <i class="fa-solid fa-baby-carriage"></i> Cría & Destete
+          </button>
+          <button class="phase-tab-btn" data-phase="levante">
+            <i class="fa-solid fa-arrow-trend-up"></i> Levante & Desarrollo
+          </button>
+          <button class="phase-tab-btn" data-phase="ceba">
+            <i class="fa-solid fa-weight-scale"></i> Ceba & Engorde Intensivo
+          </button>
+          <button class="phase-tab-btn" data-phase="lecheria">
+            <i class="fa-solid fa-bottle-droplet"></i> Lechería Especializada
+          </button>
+        </div>
+
+        <!-- Tab Content Box -->
+        <div class="phase-content-panel glass-card" id="phase-content-panel">
+          <div class="phase-grid">
+            <div class="phase-desc-col">
+              <span class="phase-tag" id="ph-tag">Fase 1: Transición Prerumiante a Rumiante</span>
+              <h3 id="ph-title">Cría y Desarrollo de Papilas Ruminales</h3>
+              <p id="ph-desc">El ternero nace con un rumen no funcional. La fermentación de concentrados iniciadores ricos en almidón produce ácido butírico y propiónico, indispensables para el crecimiento de las papilas ruminales y la absorción de nutrientes.</p>
+              
+              <div class="phase-targets">
+                <div class="target-item">
+                  <span class="target-label">Proteína Cruda Recomendada:</span>
+                  <strong id="ph-pc">18% - 22% PC</strong>
+                </div>
+                <div class="target-item">
+                  <span class="target-label">Energía NDT Objetivo:</span>
+                  <strong id="ph-ndt">> 75% NDT</strong>
+                </div>
+                <div class="target-item">
+                  <span class="target-label">Momento de Destete Clave:</span>
+                  <strong id="ph-target">Consumo de 1.0 - 1.2 kg iniciador/día</strong>
+                </div>
+              </div>
+
+              <div class="phase-alert">
+                <i class="fa-solid fa-circle-exclamation text-accent"></i>
+                <span id="ph-tip">Evite suministrar forrajes groseros de alta lignina antes de los 45 días, ya que causan distensión del rumen sin estímulo de papilas.</span>
+              </div>
+            </div>
+
+            <div class="phase-visual-col">
+              <div class="phase-feature-card">
+                <h4><i class="fa-solid fa-list-check text-accent"></i> Puntos Críticos de Control:</h4>
+                <ul id="ph-points">
+                  <li><i class="fa-solid fa-check"></i> Suministro de calostro de alta calidad (>50 g IgG/L) en las primeras 6 horas.</li>
+                  <li><i class="fa-solid fa-check"></i> Agua potable disponible separada de la leche desde el día 3 de vida.</li>
+                  <li><i class="fa-solid fa-check"></i> Iniciador peletizado o quebrado con grano seco no polvoriento.</li>
+                  <li><i class="fa-solid fa-check"></i> Transición gradual de 7 a 10 días para el destete definitivo.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infographic Presentation Section -->
+    <section class="section" id="infografia">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="sub-badge"><i class="fa-solid fa-image"></i> Material Técnico Oficial</div>
+          <h2 class="section-title">Infografía: Tablas Nutricionales en Zootecnia</h2>
+          <p class="section-subtitle">
+            Consulte la síntesis gráfica desarrollada para el diagnóstico bromatológico, clasificación de forrajes y buenas prácticas en campo.
+          </p>
+        </div>
+
+        <div class="infographic-container glass-card">
+          <div class="infographic-view-wrapper">
+            <img src="./Gemini_Generated_Image_ttvbf9ttvbf9ttvb.jpg" alt="Infografía de Tablas Nutricionales de Alimentos Bovinos" class="infographic-img" id="infographic-zoom-img">
+            <div class="zoom-overlay-hint">
+              <i class="fa-solid fa-magnifying-glass-plus"></i> Clic para expandir en alta resolución
+            </div>
+          </div>
+
+          <div class="infographic-highlights">
+            <div class="highlight-item">
+              <div class="hl-icon"><i class="fa-solid fa-book-open"></i></div>
+              <div class="hl-text">
+                <h5>1. Fundamento de Tablas</h5>
+                <p>Compilación científica de composición química para maximizar producción y salud ruminal.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="hl-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
+              <div class="hl-text">
+                <h5>2. Forrajes Conservados</h5>
+                <p>Ensilajes y henos aportan energía efectiva y fibra efectiva para estabilidad metabólica.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="hl-icon"><i class="fa-solid fa-certificate"></i></div>
+              <div class="hl-text">
+                <h5>3. Calibración Local</h5>
+                <p>Alineación obligatoria con tablas ICA y AGROSAVIA para forrajes del trópico americano.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Ranch Tour Section -->
+    <section class="section section-dark" id="video-tour">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="sub-badge"><i class="fa-solid fa-video"></i> Video Demostrativo en Campo</div>
+          <h2 class="section-title">Comportamiento Ingestivo en Pastoreo Rotacional</h2>
+          <p class="section-subtitle">
+            El pastoreo tecnificado permite sincronizar la oferta de proteína degradable y carbohidratos no fibrosos en el forraje verde.
+          </p>
+        </div>
+
+        <div class="video-showcase glass-card">
+          <div class="video-player-box">
+            <video controls playsinline preload="metadata" class="main-video" id="ranch-video">
+              <source src="./Cattle_moving_on_ranch_1080p_20261015133733.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de video.
+            </video>
+          </div>
+          
+          <div class="video-info-box">
+            <h3><i class="fa-solid fa-mountain-sun text-accent"></i> Manejo en Rancho & Cosecha de Forraje</h3>
+            <p>
+              El ganado bovino en pastoreo cosecha selectivamente las hojas superiores de mayor contenido de proteína y menor contenido de lignina. Ajustar la carga animal y los días de ocupación optimiza la tasa de bocado y el consumo voluntario ($CMS$).
+            </p>
+
+            <div class="video-feature-list">
+              <div class="vf-item">
+                <i class="fa-solid fa-clock-rotate-left text-success"></i>
+                <div>
+                  <strong>Punto Óptimo de Cosecha:</strong>
+                  <span>Entrada al potrero antes de la lignificación de tallos (máximo NDT).</span>
+                </div>
+              </div>
+              <div class="vf-item">
+                <i class="fa-solid fa-droplet text-blue"></i>
+                <div>
+                  <strong>Hidratación y Sal Mineral:</strong>
+                  <span>Bebederos limpios a menos de 200m para mantener flujo ruminal constante.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Prompt Assistant Section -->
+    <section class="section" id="asistente-ia">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="sub-badge"><i class="fa-solid fa-robot"></i> Integración Gemini & IA</div>
+          <h2 class="section-title">Generador de Consultas Nutricionales con IA</h2>
+          <p class="section-subtitle">
+            Aproveche la habilidad especializada <strong>NutriBovino Pro</strong> con su modelo LLM favorito (Gemini, ChatGPT, Claude).
+          </p>
+        </div>
+
+        <div class="ai-assistant-grid glass-card">
+          <div class="ai-controls-col">
+            <h3>Seleccione su Caso Clínico / Productivo:</h3>
+            <p class="text-muted">Elija un escenario común para generar instantáneamente el prompt zootécnico formateado en LaTeX:</p>
+
+            <div class="preset-buttons">
+              <button class="btn-preset active" data-preset="kikuyo">
+                <i class="fa-solid fa-plant-wilt"></i> Pastura Madura con Alta FDN
+              </button>
+              <button class="btn-preset" data-preset="ceba">
+                <i class="fa-solid fa-weight-hanging"></i> Dieta de Ceba Intensiva (Feedlot)
+              </button>
+              <button class="btn-preset" data-preset="leche">
+                <i class="fa-solid fa-glass-water-droplet"></i> Balance PDR vs PNDR en Lechería
+              </button>
+              <button class="btn-preset" data-preset="acidosis">
+                <i class="fa-solid fa-triangle-exclamation"></i> Diagnóstico de Riesgo de SARA
+              </button>
+            </div>
+
+            <div class="ai-badge-tip">
+              <i class="fa-brands fa-google text-accent"></i>
+              <span>Basado en el System Prompt de <code>skill_zootecnia_nutrici_n_bovina.md</code></span>
+            </div>
+          </div>
+
+          <div class="ai-output-col">
+            <div class="prompt-output-header">
+              <span>Prompt Listo para Copiar</span>
+              <button class="btn btn-outline btn-xs" id="copy-prompt-btn">
+                <i class="fa-solid fa-copy"></i> Copiar Prompt
+              </button>
+            </div>
+            
+            <textarea id="ai-prompt-box" readonly class="prompt-textarea"></textarea>
+
+            <div class="ai-instruction-footer">
+              <i class="fa-solid fa-circle-info text-accent"></i>
+              <small>Pegue este texto directamente en Google Gemini o active la skill NutriBovino Pro para recibir el balance bromatológico exacto.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="section section-dark" id="faq">
+      <div class="container faq-container">
+        <div class="section-header text-center">
+          <div class="sub-badge"><i class="fa-solid fa-circle-question"></i> Preguntas Frecuentes</div>
+          <h2 class="section-title">Dudas Clave en Nutrición Bovina</h2>
+          <p class="section-subtitle">Respuestas técnicas fundamentadas en zootecnia y bioquímica ruminal.</p>
+        </div>
+
+        <div class="accordion" id="faq-accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>¿Por qué la FDN es el factor más crítico en el consumo voluntario?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="accordion-body">
+              <p>La Fibra Detergente Neutro (FDN) ocupa volumen en el rumen y tiene una tasa de digestión más lenta que los carbohidratos solubles. Según el modelo de Mertens (NRC), un bovino regula su consumo físico cuando la ingesta de FDN alcanza aproximadamente el <strong>$1.1\% \text{ a } 1.2\%$ de su peso vivo</strong>. Cuando un pasto sobrepasa el 65% de FDN, el animal se llena físicamente antes de satisfacer sus requerimientos energéticos.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>¿Cuál es la diferencia entre PDR (Proteína Degradable en Rumen) y PNDR?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="accordion-body">
+              <p>La <strong>PDR</strong> es degradada por las bacterias ruminales en amoníaco ($NH_3$), péptidos y aminoácidos para sintetizar proteína microbiana. La <strong>PNDR</strong> (o proteína de sobrepaso/bypass) resiste la fermentación ruminal y pasa intacta al abomaso e intestino delgado, siendo indispensable para vacas de alta producción (>25 L/día) cuyos requerimientos superan la capacidad de síntesis microbiana.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>¿Cómo se previene la Acidosis Ruminal Subaguda (SARA) en dietas de engorde?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="accordion-body">
+              <p>Se previene garantizando un aporte mínimo del <strong>$18\% \text{ a } 22\%$ de Fibra Efectiva ($FDN_e$)</strong>, introduciendo los granos con almidón de manera gradual (periodo de adaptación de 14 a 21 días), fraccionando las raciones en múltiples comidas al día y utilizando amortiguadores ruminales como el bicarbonato de sodio ($0.75\% - 1.0\%$ de la MS).</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>¿Por qué es vital ajustar las tablas internacionales al trópico con AGROSAVIA?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="accordion-body">
+              <p>Las tablas NRC fueron calculadas principalmente con pasturas templadas C3 (*Lolium*, *Trifolium*). Las gramíneas tropicales son C4 (*Brachiaria*, *Panicum*, *Pennisetum*) y presentan una anatomía de Kranz con vainas parenquimatosas más gruesas y mayor lignificación, lo que altera radicalmente la cinética de fermentación y la tasa de pasaje ruminal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox Modal for Infographic -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar imagen">&times;</button>
+      <img src="./Gemini_Generated_Image_ttvbf9ttvbf9ttvb.jpg" alt="Infografía Ampliada Tablas Nutricionales" class="lightbox-img">
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon"><i class="fa-solid fa-cow"></i></div>
+          <div class="logo-text">
+            <span class="logo-title">NutriBovino<span class="accent-text">Pro</span></span>
+            <span class="logo-subtitle">Zootecnia & Nutrición Bovina</span>
+          </div>
+        </div>
+        <p class="footer-bio">
+          Plataforma técnico-científica dedicada al modelamiento y optimización de la alimentación de rumiantes para productores, zootecnistas y profesionales del agro.
+        </p>
+        <div class="footer-badges">
+          <span class="f-badge"><i class="fa-solid fa-award"></i> Estándares NRC</span>
+          <span class="f-badge"><i class="fa-solid fa-dna"></i> FEDNA</span>
+          <span class="f-badge"><i class="fa-solid fa-leaf"></i> AGROSAVIA</span>
+        </div>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#calculadora">Calculadora de Raciones</a></li>
+          <li><a href="#parametros">Análisis Bromatológico</a></li>
+          <li><a href="#fases">Fases Zootécnicas</a></li>
+          <li><a href="#infografia">Infografía Oficial</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Recursos Técnicos</h4>
+        <ul>
+          <li><a href="./skill_zootecnia_nutrici_n_bovina.md">Documento de la Skill</a></li>
+          <li><a href="./README.md">README con Badges</a></li>
+          <li><a href="./Gemini_Generated_Image_ttvbf9ttvbf9ttvb.jpg" target="_blank">Infografía Full HD</a></li>
+          <li><a href="./Cattle_moving_on_ranch_1080p_20261015133733.mp4" target="_blank">Video Ganadería</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Descargo Zootécnico</h4>
+        <p class="disclaimer-text">
+          Las fórmulas y cálculos corresponden a modelos teóricos reconocidos. Se recomienda validar los lotes en campo con el seguimiento de un Zootecnista o Médico Veterinario colegiado.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <span>© 2026 NutriBovino Pro • Desarrollado con rigor zootécnico y tecnología de punta.</span>
+        <span>Licencia MIT • Código Abierto</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Script -->
+  <script src="./app.js"></script>
+</body>
+</html>
